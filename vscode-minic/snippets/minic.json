@@ -1,0 +1,42 @@
+{
+  "main": {
+    "prefix": "main",
+    "body": ["int main() {", "\t$0", "\treturn 0;", "}"],
+    "description": "Função principal"
+  },
+  "func": {
+    "prefix": "func",
+    "body": ["${1:int} ${2:nome}(${3}) {", "\t$0", "}"],
+    "description": "Declaração de função"
+  },
+  "if": {
+    "prefix": "if",
+    "body": ["if (${1:condicao}) {", "\t$0", "}"],
+    "description": "Comando if"
+  },
+  "ifelse": {
+    "prefix": "ifelse",
+    "body": ["if (${1:condicao}) {", "\t$2", "} else {", "\t$0", "}"],
+    "description": "Comando if/else"
+  },
+  "while": {
+    "prefix": "while",
+    "body": ["while (${1:condicao}) {", "\t$0", "}"],
+    "description": "Laço while"
+  },
+  "for": {
+    "prefix": "for",
+    "body": ["for (int ${1:i} = 0; ${1:i} < ${2:n}; ${1:i} = ${1:i} + 1) {", "\t$0", "}"],
+    "description": "Laço for"
+  },
+  "print": {
+    "prefix": "print",
+    "body": ["print(${1:\"texto\"});"],
+    "description": "Saída padrão"
+  },
+  "read": {
+    "prefix": "read",
+    "body": ["read(${1:variavel});"],
+    "description": "Entrada padrão"
+  }
+}

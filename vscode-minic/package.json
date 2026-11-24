@@ -1,0 +1,50 @@
+{
+  "name": "minic-language",
+  "displayName": "MiniC Language Support",
+  "description": "Syntax highlighting, diagnósticos de erros em tempo real e execução para MiniC (.mc) — Compiladores IFC",
+  "version": "1.1.0",
+  "publisher": "lucaskthiel",
+  "icon": "icon.png",
+  "engines": { "vscode": "^1.60.0" },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onLanguage:minic"
+  ],
+  "categories": ["Programming Languages", "Linters", "Snippets"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "minic",
+        "aliases": ["MiniC", "minic"],
+        "extensions": [".mc"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "minic",
+        "scopeName": "source.minic",
+        "path": "./syntaxes/minic.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      { "language": "minic", "path": "./snippets/minic.json" }
+    ],
+    "commands": [
+      {
+        "command": "minic.runFile",
+        "title": "MiniC: Compilar e Executar (.mc)",
+        "icon": "$(play)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "editorLangId == minic",
+          "command": "minic.runFile",
+          "group": "navigation"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+# Materiais locais e artefatos de compilação
+pdf/
+build/
+img/
+ModeloArtigo INTERUNI - 2026.docx
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+*.egg-info/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code / Extensão
+.vscode/
+*.vsix
+vscode-minic/node_modules/
